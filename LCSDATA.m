@@ -8,6 +8,9 @@ function [theta_exp,w_exp,v_exp,time] = LCSDATA(filename)
     slideSpeed = data(:,5); % mm/s
     sampleTime = data(:,6); %ms
 
+
+    mins = islocalmin(wheelPos);
+    second_min = find(mins,2);
     %% Data conditioning
     rotOffset = floorDiv(wheelPos, 360); % offset the rotation
     wheelPos = wheelPos - 360*rotOffset(1);

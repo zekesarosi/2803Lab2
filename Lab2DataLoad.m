@@ -1,7 +1,3 @@
-clear;
-clc;
-close all;
-
 %% Load in the Locomotive Data
 folder_path = 'C:\Users\zekes\OneDrive\College\Year 3\ASEN 2803\2803LAB2\Locomotive_Data_2020\'; % Replace with your own folder path
 
