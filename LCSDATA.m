@@ -1,12 +1,12 @@
 function [theta_exp,w_exp,v_exp,time] = LCSDATA(filename)
     data = readmatrix(filename);
 
-    time = data(:,1);
-    wheelPos = data(:,2);
-    slidePos = data(:,3);
-    wheelSpeed = data(:,4);
-    slideSpeed = data(:,5);
-    sampleTime = data(:,6);
+    time = data(:,1); %seconds
+    wheelPos = data(:,2); %deg
+    slidePos = data(:,3); %mm
+    wheelSpeed = data(:,4); %deg/s
+    slideSpeed = data(:,5); % mm/s
+    sampleTime = data(:,6); %ms
 
     %% Data conditioning
     rotOffset = floorDiv(wheelPos, 360); % offset the rotation
